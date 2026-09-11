@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sensor-reliability"
+version = "0.1.0"
+description = "Reliability analysis of low-cost citizen air-quality sensors (Sensor.Community)"
+requires-python = ">=3.11,<3.12"
+
+# Pinned for reproducibility. Additions are made per milestone and recorded in DESIGN.md.
+dependencies = [
+    "requests==2.32.3",      # HTTP poller
+    "paho-mqtt==2.1.0",      # publish/consume MQTT (Mosquitto)
+    "confluent-kafka==2.5.3", # Kafka producer for the MQTT->Kafka bridge and replay
+    "pyspark==3.5.3",        # Structured Streaming; also used by tests in local mode
+    "pandas==2.2.3",         # analysis layer
+    "pyarrow==17.0.0",       # Parquet read/write
+    "matplotlib==3.9.2",     # result charts
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.3",
+    "ruff==0.6.9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
