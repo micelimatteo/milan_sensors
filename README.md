@@ -54,8 +54,10 @@ Why MQTT *and* Kafka, and why the backfill skips MQTT, is documented in `DESIGN.
 - **Measurements:** Sensor.Community open API, base `https://data.sensor.community`. No API key;
   a `User-Agent` header is required. Daily CSV snapshots are archived at
   `https://archive.sensor.community`.
-- **License:** Sensor.Community data is published under the Open Database License (ODbL 1.0).
-  Exact attribution text and the canonical license link are pinned in `DESIGN.md` (decision 8).
+- **License:** Sensor.Community data is published under the Open Database License (ODbL 1.0) for
+  the database and the Database Contents License (DbCL 1.0) for the contents. This project
+  contains data from Sensor.Community (https://sensor.community), licensed under ODbL 1.0 /
+  DbCL 1.0. See `DESIGN.md` (decision 8).
 - **Reference data (later milestone):** OpenAQ v3, whose European coverage originates from the
   European Environment Agency. Requires a free API key.
 
@@ -77,8 +79,19 @@ make install
 make test
 ```
 
-The ingestion, streaming, and analysis commands (`make poll`, `make replay`, `make stream`,
-`make analyze`) are added as their milestones land.
+Capture raw readings for the configured region and run the data-quality profile:
+
+```bash
+cp .env.example .env    # adjust SC_USER_AGENT with a contact address
+make poll-once          # single poll -> data/raw/date=.../part-*.parquet
+make profile            # data-quality report over data/raw
+```
+
+`make poll` runs the poller on a loop. The streaming and analysis commands (`make replay`,
+`make stream`, `make analyze`) are added as their milestones land.
+
+Note: the host code and tests run on Python 3.11 or 3.12. The Spark milestone (M3) settles the
+interpreter/Spark version question recorded in `DESIGN.md` (decision 9).
 
 ## Results *(pending)*
 

@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Local config and secrets
+.env
+
+# Data and outputs (regenerated from the pipeline)
+data/raw/
+data/curated/
+artifacts/
+
+# Spark
+spark-warehouse/
+**/checkpoints/

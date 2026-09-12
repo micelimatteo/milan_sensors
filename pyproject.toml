@@ -6,14 +6,15 @@ build-backend = "setuptools.build_meta"
 name = "sensor-reliability"
 version = "0.1.0"
 description = "Reliability analysis of low-cost citizen air-quality sensors (Sensor.Community)"
-requires-python = ">=3.11,<3.12"
+requires-python = ">=3.11,<3.13"
 
 # Pinned for reproducibility. Additions are made per milestone and recorded in DESIGN.md.
 dependencies = [
     "requests==2.32.3",      # HTTP poller
+    "python-dotenv==1.0.1",  # load .env for local runs
     "paho-mqtt==2.1.0",      # publish/consume MQTT (Mosquitto)
     "confluent-kafka==2.5.3", # Kafka producer for the MQTT->Kafka bridge and replay
-    "pyspark==3.5.3",        # Structured Streaming; also used by tests in local mode
+    "pyspark==3.5.3",        # Structured Streaming (version provisional; finalized at M3, see DESIGN.md)
     "pandas==2.2.3",         # analysis layer
     "pyarrow==17.0.0",       # Parquet read/write
     "matplotlib==3.9.2",     # result charts
