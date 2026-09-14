@@ -1,0 +1,9 @@
+# Spark runtime for the streaming job and its tests. Pinned to match the host pyspark used in
+# development (DESIGN.md decision 9). The project is mounted at /app by docker-compose.
+FROM apache/spark:3.5.3
+
+USER root
+RUN python3 -m pip install --no-cache-dir pytest==8.3.3
+ENV PYTHONPATH=/app/src
+WORKDIR /app
+USER spark

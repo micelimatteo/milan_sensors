@@ -87,8 +87,41 @@ make poll-once          # single poll -> data/raw/date=.../part-*.parquet
 make profile            # data-quality report over data/raw
 ```
 
-`make poll` runs the poller on a loop. The streaming and analysis commands (`make replay`,
-`make stream`, `make analyze`) are added as their milestones land.
+`make poll` runs the poller on a loop.
+
+Ingestion transport (needs `make up` running). The live path publishes one canonical event per
+reading to MQTT and bridges it to Kafka; the backfill path replays historical readings from the
+archive straight to Kafka.
+
+```bash
+make up                                   # Mosquitto + Kafka
+make bridge                               # MQTT -> Kafka (leave running)
+make poll-mqtt                            # live path: poll -> MQTT (another terminal)
+make replay START=2026-09-01 END=2026-09-07   # backfill -> Kafka
+```
+
+The study population that backfill iterates lives in `config/milan_sensors.csv`; regenerate it
+from captured polls with `make study`.
+
+Stream processing (Spark, runs in its pinned image under the `spark` compose profile):
+
+```bash
+make stream       # backfill: drain Kafka once, then stop -> data/curated/{hourly,dq_metrics}
+make stream-live  # keep processing new data
+```
+
+`hourly` holds per-(location, hour) means with PM and humidity co-located; `dq_metrics` holds
+per-window kept/dropped counts by reason. The analysis command (`make analyze`) is added in M4.
+
+### Tests
+
+```bash
+make test         # non-Spark tests (host, no Java needed)
+make test-spark   # Spark transform tests, in the pinned Spark image
+```
+
+The Spark tests also run on the host if a JDK is present and the extra is installed
+(`pip install -e ".[spark,dev]"`, then `make test` picks them up); without a JVM they skip.
 
 Note: the host code and tests run on Python 3.11 or 3.12. The Spark milestone (M3) settles the
 interpreter/Spark version question recorded in `DESIGN.md` (decision 9).

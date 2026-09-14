@@ -35,6 +35,21 @@ services:
     volumes:
       - kafka-data:/var/lib/kafka/data
 
+  # Spark is not part of `docker compose up` (infra only); it runs on demand under the "spark"
+  # profile via `make stream` / `make test-spark`. See Makefile.
+  spark:
+    build:
+      context: .
+      dockerfile: Dockerfile.spark
+    profiles: ["spark"]
+    depends_on:
+      - kafka
+    environment:
+      KAFKA_BOOTSTRAP: kafka:9092   # internal listener
+      KAFKA_TOPIC: sc.readings
+    volumes:
+      - ./:/app
+
 volumes:
   mosquitto-data:
   kafka-data:

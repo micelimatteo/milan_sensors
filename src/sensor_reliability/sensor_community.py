@@ -15,6 +15,8 @@ import datetime as dt
 
 import requests
 
+from .coerce import to_float, to_int
+
 BASE_URL = "https://data.sensor.community"
 _FILTER_PATH = "/airrohr/v1/filter/area={lat},{lon},{radius}"
 
@@ -61,38 +63,19 @@ def flatten(records: list[dict], fetched_at: dt.datetime) -> list[dict]:
             "location_id": loc.get("id"),
             "sensor_id": sensor.get("id"),
             "sensor_type": sensor_type,
-            "latitude": _to_float(loc.get("latitude")),
-            "longitude": _to_float(loc.get("longitude")),
-            "altitude": _to_float(loc.get("altitude")),
+            "latitude": to_float(loc.get("latitude")),
+            "longitude": to_float(loc.get("longitude")),
+            "altitude": to_float(loc.get("altitude")),
             "country": loc.get("country"),
-            "indoor": _to_int(loc.get("indoor")),
-            "exact_location": _to_int(loc.get("exact_location")),
+            "indoor": to_int(loc.get("indoor")),
+            "exact_location": to_int(loc.get("exact_location")),
         }
         for sdv in rec.get("sensordatavalues") or []:
             rows.append(
                 {
                     **base,
                     "value_type": sdv.get("value_type"),
-                    "value": _to_float(sdv.get("value")),
+                    "value": to_float(sdv.get("value")),
                 }
             )
     return rows
-
-
-def _to_float(value: object) -> float | None:
-    """Coerce API values (usually strings, occasionally numbers or None) to float."""
-    if value is None or value == "":
-        return None
-    try:
-        return float(value)  # type: ignore[arg-type]
-    except (TypeError, ValueError):
-        return None
-
-
-def _to_int(value: object) -> int | None:
-    if value is None or value == "":
-        return None
-    try:
-        return int(value)  # type: ignore[arg-type]
-    except (TypeError, ValueError):
-        return None

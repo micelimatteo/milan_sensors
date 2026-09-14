@@ -14,13 +14,17 @@ dependencies = [
     "python-dotenv==1.0.1",  # load .env for local runs
     "paho-mqtt==2.1.0",      # publish/consume MQTT (Mosquitto)
     "confluent-kafka==2.5.3", # Kafka producer for the MQTT->Kafka bridge and replay
-    "pyspark==3.5.3",        # Structured Streaming (version provisional; finalized at M3, see DESIGN.md)
     "pandas==2.2.3",         # analysis layer
     "pyarrow==17.0.0",       # Parquet read/write
     "matplotlib==3.9.2",     # result charts
 ]
 
 [project.optional-dependencies]
+# Spark runs in its pinned Docker image (apache/spark:3.5.3); pyspark is a host dependency only
+# for running the streaming unit tests locally, and must match the image version. See DESIGN.md.
+spark = [
+    "pyspark==3.5.3",
+]
 dev = [
     "pytest==8.3.3",
     "ruff==0.6.9",

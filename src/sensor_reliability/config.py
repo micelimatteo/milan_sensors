@@ -17,7 +17,12 @@ class Config:
     area_lon: float
     area_radius_km: float
     poll_interval_seconds: int
-    raw_dir: str = "data/raw"
+    raw_dir: str
+    mqtt_host: str
+    mqtt_port: int
+    mqtt_topic_prefix: str
+    kafka_bootstrap: str
+    kafka_topic: str
 
     @classmethod
     def from_env(cls) -> "Config":
@@ -29,4 +34,9 @@ class Config:
             area_radius_km=float(os.environ.get("SC_AREA_RADIUS_KM", "15")),
             poll_interval_seconds=int(os.environ.get("POLL_INTERVAL_SECONDS", "300")),
             raw_dir=os.environ.get("RAW_DIR", "data/raw"),
+            mqtt_host=os.environ.get("MQTT_HOST", "localhost"),
+            mqtt_port=int(os.environ.get("MQTT_PORT", "1883")),
+            mqtt_topic_prefix=os.environ.get("MQTT_TOPIC_PREFIX", "sc/milan"),
+            kafka_bootstrap=os.environ.get("KAFKA_BOOTSTRAP", "localhost:9094"),
+            kafka_topic=os.environ.get("KAFKA_TOPIC", "sc.readings"),
         )
