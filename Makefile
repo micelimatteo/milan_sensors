@@ -54,6 +54,14 @@ stream-live:   ## keep processing new Kafka data
 test-spark:    ## run the Spark unit tests in the pinned Spark image
 	docker compose --profile spark run --rm spark python3 -m pytest tests/test_streaming.py
 
+# Batch reprocess archive -> curated Parquet without Kafka. Usage: make curate START=... END=...
+curate:
+	docker compose --profile spark run --rm spark \
+		python3 -m sensor_reliability.curate --start $(START) --end $(END)
+
+analyze:       ## humidity-vs-PM analysis over data/curated -> artifacts/
+	python -m sensor_reliability.analysis.humidity
+
 test:
 	pytest
 

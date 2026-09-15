@@ -18,11 +18,11 @@ reliability analysis and the honest data-quality accounting that feeds it.
 
 ## Status
 
-Under construction, milestone by milestone. What exists today: repository skeleton and the
-service scaffolding (message broker + log). The ingestion, stream processing, and analysis are
-being added in subsequent milestones (see `DESIGN.md` for the plan and the reasoning behind
-each choice). Sections below marked *(pending)* are not implemented yet; nothing here reports
-results that do not exist.
+Under construction, milestone by milestone. Working end to end today: ingestion (poller ->
+MQTT -> Kafka, plus archive backfill), Spark event-time stream processing to curated Parquet, and
+the humidity-vs-PM analysis with committed result artifacts (see Results). Still to come: the
+reference-station comparison (M5) and containerising the app services for a single-command run
+(M6). See `DESIGN.md` for the plan and the reasoning behind each choice.
 
 ## Scope of the first slice
 
@@ -111,7 +111,15 @@ make stream-live  # keep processing new data
 ```
 
 `hourly` holds per-(location, hour) means with PM and humidity co-located; `dq_metrics` holds
-per-window kept/dropped counts by reason. The analysis command (`make analyze`) is added in M4.
+per-window kept/dropped counts by reason.
+
+Without Kafka, the same curated data can be produced directly from the archive (the batch twin of
+the streaming job, sharing its transforms), then analysed:
+
+```bash
+make curate START=2026-09-01 END=2026-09-13   # archive -> data/curated (no broker needed)
+make analyze                                  # humidity-vs-PM analysis -> artifacts/
+```
 
 ### Tests
 
@@ -126,11 +134,24 @@ The Spark tests also run on the host if a JDK is present and the extra is instal
 Note: the host code and tests run on Python 3.11 or 3.12. The Spark milestone (M3) settles the
 interpreter/Spark version question recorded in `DESIGN.md` (decision 9).
 
-## Results *(pending)*
+## Results
 
-Result artifacts (a small set of charts and tables answering the reliability question) and the
-written analysis will live in `ANALYSIS.md` and an `artifacts/` directory once the analysis
-milestones are complete. No results are reported until they exist.
+Part (a), humidity vs PM (Milan, 2026-09-01..2026-09-13; full write-up in `ANALYSIS.md`,
+artifacts in `artifacts/`):
+
+- Over 2473 co-located hourly rows, the marginal PM2.5-vs-RH association is weakly **negative**
+  (Spearman -0.16), not positive. The relationship is dominated by **diurnal confounding**: RH
+  peaks overnight while PM peaks at rush hour.
+- Even at RH >= 99% (22% of rows), PM2.5 is not clearly elevated -- no clean hygroscopic inflation
+  is visible in this clean September air.
+- The standard kappa-Koehler correction deflates readings heavily and is **unstable near
+  saturation** (95-100% RH bin median 3.30 -> ~0.07 ug/m3), so it cannot be trusted here without a
+  reference.
+- Practical takeaway: flag PM at high RH (>= ~90%, a third of the data) as low-confidence. Whether
+  a correction actually reduces bias is answered in M5 against reference stations.
+
+This is an honest, partly negative result: in this window the humidity artifact is not separable
+from meteorology using the citizen data alone. Part (b) (reference comparison) is next.
 
 ## Limitations and next steps
 

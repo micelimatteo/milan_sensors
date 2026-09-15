@@ -13,10 +13,9 @@ venv/
 # Local config and secrets
 .env
 
-# Data and outputs (regenerated from the pipeline)
+# Data (regenerated from the pipeline). Result artifacts under artifacts/ are committed.
 data/raw/
 data/curated/
-artifacts/
 
 # Spark
 spark-warehouse/

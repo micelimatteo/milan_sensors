@@ -3,7 +3,8 @@
 FROM apache/spark:3.5.3
 
 USER root
-RUN python3 -m pip install --no-cache-dir pytest==8.3.3
+# requests: for the batch reprocessor (curate.py) fetching the archive from inside the image.
+RUN python3 -m pip install --no-cache-dir pytest==8.3.3 requests==2.32.3
 ENV PYTHONPATH=/app/src
 WORKDIR /app
 USER spark
