@@ -2,7 +2,7 @@ import datetime as dt
 
 from sensor_reliability.archive import parse_csv
 
-FETCHED_AT = dt.datetime(2026, 9, 12, 9, 0, tzinfo=dt.timezone.utc)
+FETCHED_AT = dt.datetime(2026, 9, 12, 9, 0, tzinfo=dt.UTC)
 
 # Real header layouts (see the archive; columns vary by sensor type).
 SDS011_CSV = (

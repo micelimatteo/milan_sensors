@@ -4,10 +4,8 @@
 .PHONY: up down logs install test lint fmt poll poll-once profile poll-mqtt bridge replay study \
 	stream stream-live test-spark
 
-# spark-submit with the pinned Kafka connector; ivy cache in /tmp so the non-root user can write.
-SPARK_SUBMIT = /opt/spark/bin/spark-submit \
-	--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.3 \
-	--conf spark.jars.ivy=/tmp/.ivy2
+# The Kafka connector jars are vendored into the Spark image (Dockerfile.spark), so no --packages.
+SPARK_SUBMIT = /opt/spark/bin/spark-submit
 
 up:            ## start Mosquitto + Kafka
 	docker compose up -d
@@ -56,7 +54,7 @@ test-spark:    ## run the Spark unit tests in the pinned Spark image
 
 # Batch reprocess archive -> curated Parquet without Kafka. Usage: make curate START=... END=...
 curate:
-	docker compose --profile spark run --rm spark \
+	docker compose --profile spark run --rm --no-deps spark \
 		python3 -m sensor_reliability.curate --start $(START) --end $(END)
 
 analyze:       ## humidity-vs-PM analysis over data/curated -> artifacts/

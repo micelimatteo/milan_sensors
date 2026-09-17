@@ -55,7 +55,7 @@ def record_to_event(rec: dict, fetched_at: dt.datetime) -> dict | None:
 
 def to_iso_z(t: dt.datetime) -> str:
     """Format a datetime as UTC ISO 8601 with a trailing Z."""
-    return t.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return t.astimezone(dt.UTC).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
 def _api_timestamp_to_iso(ts: str | None) -> str | None:

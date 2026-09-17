@@ -1,5 +1,8 @@
-# Infrastructure only. Application services (poller, bridge, replay, Spark) are added in later
-# milestones. Image tags are pinned; see DESIGN.md decision 9.
+# `docker compose up` starts the infrastructure (Mosquitto + Kafka).
+# Profiles add the rest on demand:
+#   --profile live    poller -> MQTT -> bridge -> Kafka (the live pipeline)
+#   --profile spark   the Spark job / batch reprocessor / tests (via the Makefile)
+# Image tags are pinned; see DESIGN.md decisions 9 and 16.
 
 services:
   mosquitto:
@@ -34,9 +37,47 @@ services:
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
     volumes:
       - kafka-data:/var/lib/kafka/data
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 12
 
-  # Spark is not part of `docker compose up` (infra only); it runs on demand under the "spark"
-  # profile via `make stream` / `make test-spark`. See Makefile.
+  # Live pipeline (opt in with --profile live). Both services share one app image.
+  poller:
+    image: sensor-reliability-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    profiles: ["live"]
+    depends_on:
+      - mosquitto
+    environment:
+      MQTT_HOST: mosquitto
+      SC_USER_AGENT: ${SC_USER_AGENT:-sensor-reliability/0.1 (portfolio)}
+      SC_AREA_LAT: "45.4642"
+      SC_AREA_LON: "9.1900"
+      SC_AREA_RADIUS_KM: "15"
+    command: python -m sensor_reliability.poller --sink mqtt
+
+  bridge:
+    image: sensor-reliability-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    profiles: ["live"]
+    depends_on:
+      mosquitto:
+        condition: service_started
+      kafka:
+        condition: service_healthy
+    environment:
+      MQTT_HOST: mosquitto
+      KAFKA_BOOTSTRAP: kafka:9092
+      KAFKA_TOPIC: sc.readings
+    command: python -m sensor_reliability.bridge
+
+  # Spark job / batch reprocessor / tests (opt in with --profile spark), driven by the Makefile.
   spark:
     build:
       context: .

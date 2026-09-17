@@ -2,7 +2,7 @@ import datetime as dt
 
 from sensor_reliability.sensor_community import flatten
 
-FETCHED_AT = dt.datetime(2026, 9, 12, 9, 0, tzinfo=dt.timezone.utc)
+FETCHED_AT = dt.datetime(2026, 9, 12, 9, 0, tzinfo=dt.UTC)
 
 # Mirrors real API quirks: string values, a derived value that is already numeric and has no id,
 # and a co-located node (BME280 humidity + SDS011 PM sharing one location).

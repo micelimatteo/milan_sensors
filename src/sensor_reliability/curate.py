@@ -19,8 +19,8 @@ import os
 import requests
 from pyspark.sql import SparkSession
 
-from .config import Config
 from .archive import parse_csv
+from .config import Config
 from .replay import fetch_csv
 from .streaming.transforms import (
     curated_by_location,
@@ -36,7 +36,7 @@ from .study import load_study_sensors
 def collect_events(start: str, end: str, user_agent: str) -> list[dict]:
     """Fetch and parse every study sensor's archive file across the date range."""
     session = requests.Session()
-    fetched_at = dt.datetime.now(dt.timezone.utc)
+    fetched_at = dt.datetime.now(dt.UTC)
     d0, d1 = dt.date.fromisoformat(start), dt.date.fromisoformat(end)
     sensors = load_study_sensors()
 

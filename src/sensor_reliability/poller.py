@@ -17,8 +17,8 @@ import json
 import time
 from pathlib import Path
 
-import pandas as pd
 import paho.mqtt.client as mqtt
+import pandas as pd
 import requests
 
 from .config import Config
@@ -27,7 +27,7 @@ from .sensor_community import fetch_area, flatten
 
 
 def _now_utc() -> dt.datetime:
-    return dt.datetime.now(dt.timezone.utc)
+    return dt.datetime.now(dt.UTC)
 
 
 def write_raw(records: list[dict], raw_dir: str, fetched_at: dt.datetime) -> Path | None:

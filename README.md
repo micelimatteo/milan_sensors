@@ -59,82 +59,56 @@ Why MQTT *and* Kafka, and why the backfill skips MQTT, is documented in `DESIGN.
   the database and the Database Contents License (DbCL 1.0) for the contents. This project
   contains data from Sensor.Community (https://sensor.community), licensed under ODbL 1.0 /
   DbCL 1.0. See `DESIGN.md` (decision 8).
-- **Reference data (later milestone):** OpenAQ v3, whose European coverage originates from the
-  European Environment Agency. Requires a free API key.
+- **Reference data:** ARPA Lombardia (the regional environmental agency), daily PM2.5 from its
+  Milan stations, via the Socrata Open Data API (dati.lombardia.it). Keyless.
 
-## Running it *(partly pending)*
+## Running it
 
-Requirements: Docker and Docker Compose; Python 3.11 for local development and tests.
-
-Bring up the infrastructure (message broker and log):
-
-```bash
-make up      # start Mosquitto + Kafka
-make down    # stop and remove them
-```
-
-Install the Python package for local development and run the tests:
+Requirements: Docker and Docker Compose; Python 3.11 or 3.12 for host-side development, the
+analysis, and tests. Copy the env template first (set a real contact address in the User-Agent):
 
 ```bash
-make install
-make test
+cp .env.example .env
 ```
 
-Capture raw readings for the configured region and run the data-quality profile:
+### Reproduce the results
+
+The headline analysis needs no live services. `curate` reprocesses the archive to curated Parquet
+inside the pinned Spark image (reusing the streaming transforms); the analysis runs on the host:
 
 ```bash
-cp .env.example .env    # adjust SC_USER_AGENT with a contact address
-make poll-once          # single poll -> data/raw/date=.../part-*.parquet
-make profile            # data-quality report over data/raw
+make install                                  # host package + dev deps
+make curate START=2026-09-01 END=2026-09-13   # archive -> data/curated (Spark image, no broker)
+make analyze                                  # humidity vs PM       -> artifacts/
+make reference                                # citizen vs ARPA ref  -> artifacts/
 ```
 
-`make poll` runs the poller on a loop.
+Curated outputs: `hourly` (per-(location, hour) means, PM and humidity co-located) and
+`dq_metrics` (per-window kept/dropped counts by reason).
 
-Ingestion transport (needs `make up` running). The live path publishes one canonical event per
-reading to MQTT and bridges it to Kafka; the backfill path replays historical readings from the
-archive straight to Kafka.
+### Live streaming pipeline (optional)
+
+The end-to-end streaming path, containerised:
 
 ```bash
-make up                                   # Mosquitto + Kafka
-make bridge                               # MQTT -> Kafka (leave running)
-make poll-mqtt                            # live path: poll -> MQTT (another terminal)
-make replay START=2026-09-01 END=2026-09-07   # backfill -> Kafka
+docker compose --profile live up --build   # infra + poller -> MQTT -> bridge -> Kafka
+make stream                                # Spark: drain Kafka -> data/curated (another terminal)
 ```
 
-The study population that backfill iterates lives in `config/milan_sensors.csv`; regenerate it
-from captured polls with `make study`.
-
-Stream processing (Spark, runs in its pinned image under the `spark` compose profile):
-
-```bash
-make stream       # backfill: drain Kafka once, then stop -> data/curated/{hourly,dq_metrics}
-make stream-live  # keep processing new data
-```
-
-`hourly` holds per-(location, hour) means with PM and humidity co-located; `dq_metrics` holds
-per-window kept/dropped counts by reason.
-
-Without Kafka, the same curated data can be produced directly from the archive (the batch twin of
-the streaming job, sharing its transforms), then analysed:
-
-```bash
-make curate START=2026-09-01 END=2026-09-13   # archive -> data/curated (no broker needed)
-make analyze                                  # humidity-vs-PM analysis -> artifacts/
-make reference                                # citizen-vs-ARPA-reference comparison -> artifacts/
-```
+Backfill through Kafka instead of the live poller: `make replay START=... END=...`. To drive the
+pieces on the host rather than in containers: `make up`, then `make bridge` / `make poll-mqtt`, or
+`make poll-once` / `make profile` for raw capture and the data-quality report. The study
+population backfill iterates is `config/milan_sensors.csv` (regenerate with `make study`).
 
 ### Tests
 
 ```bash
-make test         # non-Spark tests (host, no Java needed)
-make test-spark   # Spark transform tests, in the pinned Spark image
+make test         # host tests (the Spark tests self-skip without a JVM)
+make test-spark   # Spark transform tests in the pinned Spark image
 ```
 
-The Spark tests also run on the host if a JDK is present and the extra is installed
-(`pip install -e ".[spark,dev]"`, then `make test` picks them up); without a JVM they skip.
-
-Note: the host code and tests run on Python 3.11 or 3.12. The Spark milestone (M3) settles the
-interpreter/Spark version question recorded in `DESIGN.md` (decision 9).
+CI (GitHub Actions) runs ruff and the full suite on every push, with a JDK so the Spark tests
+execute too.
 
 ## Results
 
@@ -172,3 +146,8 @@ humidity correction. Full write-up in `ANALYSIS.md`.
 Tracked honestly in `ANALYSIS.md` as findings accumulate. Known constraints going in: the
 source is a 5-minute poll of already-averaged values; citizen-sensor metadata (siting, exact
 coordinates) is uneven; and reference stations are sparse relative to citizen sensors.
+
+## License
+
+Code is licensed under the MIT License (`LICENSE`). The Sensor.Community measurement data is used
+under ODbL 1.0 / DbCL 1.0, and the reference data is from ARPA Lombardia's open data portal.

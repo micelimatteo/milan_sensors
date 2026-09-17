@@ -7,6 +7,7 @@ name = "sensor-reliability"
 version = "0.1.0"
 description = "Reliability analysis of low-cost citizen air-quality sensors (Sensor.Community)"
 requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
 
 # Pinned for reproducibility. Additions are made per milestone and recorded in DESIGN.md.
 dependencies = [

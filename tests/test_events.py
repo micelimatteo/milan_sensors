@@ -2,7 +2,7 @@ import datetime as dt
 
 from sensor_reliability.events import record_to_event
 
-FETCHED_AT = dt.datetime(2026, 9, 12, 9, 0, tzinfo=dt.timezone.utc)
+FETCHED_AT = dt.datetime(2026, 9, 12, 9, 0, tzinfo=dt.UTC)
 
 RECORD = {
     "id": 30675246373,

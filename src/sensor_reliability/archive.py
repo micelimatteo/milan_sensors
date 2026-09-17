@@ -28,7 +28,7 @@ def parse_csv(text: str, fetched_at: dt.datetime) -> list[dict]:
     for line in lines[1:]:
         if not line:
             continue
-        row = dict(zip(header, line.split(";")))
+        row = dict(zip(header, line.split(";"), strict=False))
         event = row_to_event(row, fetched_at)
         if event is not None:
             events.append(event)

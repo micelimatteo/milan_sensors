@@ -15,8 +15,8 @@ import sys
 
 import pandas as pd
 
-from .rules import in_plausible_range, is_outdoor, is_saturated_humidity
 from ..sensor_community import PM_VALUE_TYPES
+from .rules import in_plausible_range, is_outdoor, is_saturated_humidity
 
 
 def load(path: str) -> pd.DataFrame:
@@ -77,7 +77,7 @@ def profile(path: str) -> None:
         present = sub[sub["value"].notna()]
         missing = len(sub) - len(present)
         # out-of-range is counted among present values only; missing is reported separately.
-        invalid = int((~present["value"].apply(lambda v: in_plausible_range(vt, v))).sum())
+        invalid = int((~present["value"].apply(lambda v, vt=vt: in_plausible_range(vt, v))).sum())
         print(f"  {vt:<12} n={len(sub):<5} min={present['value'].min():<9.2f} "
               f"max={present['value'].max():<10.2f} missing={missing} out-of-range={invalid}")
 

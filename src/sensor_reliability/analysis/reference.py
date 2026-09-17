@@ -73,10 +73,10 @@ def fetch_reference_daily(
 ) -> pd.DataFrame:
     """Daily PM2.5 per station over the window, dropping ARPA's missing-value flags (< 0)."""
     ids = ",".join(f"'{i}'" for i in sensor_ids)
+    where = f"idsensore in({ids}) AND data between '{start}T00:00:00' and '{end}T23:59:59'"
     rows = _soql(
         MEASUREMENTS_DATASET, session,
-        **{"$where": f"idsensore in({ids}) AND data between '{start}T00:00:00' and '{end}T23:59:59'",
-           "$select": "idsensore,data,valore", "$limit": "50000"},
+        **{"$where": where, "$select": "idsensore,data,valore", "$limit": "50000"},
     )
     df = pd.DataFrame(rows)
     df["idsensore"] = df["idsensore"].astype(int)
@@ -107,7 +107,7 @@ def assign_nearest(citizen: pd.DataFrame, stations: pd.DataFrame) -> pd.DataFram
     nearest = []
     for loc in locs.itertuples(index=False):
         dists = stations.apply(
-            lambda s: haversine_km(loc.lat, loc.lon, s["lat"], s["lng"]), axis=1
+            lambda s, loc=loc: haversine_km(loc.lat, loc.lon, s["lat"], s["lng"]), axis=1
         )
         j = dists.idxmin()
         nearest.append((loc.location_id, int(stations.loc[j, "idsensore"]), round(dists[j], 1)))

@@ -5,6 +5,23 @@ FROM apache/spark:3.5.3
 USER root
 # requests: for the batch reprocessor (curate.py) fetching the archive from inside the image.
 RUN python3 -m pip install --no-cache-dir pytest==8.3.3 requests==2.32.3
+
+# Vendor the Kafka connector jars into the Spark classpath, so spark-submit needs no --packages
+# (no ivy/Maven fetch at run time; the job runs offline once the image is built). Versions match
+# Spark 3.5.3 (kafka-clients 3.4.1, commons-pool2 2.11.1). See DESIGN.md decision 16.
+RUN python3 - <<'PY'
+import urllib.request
+base = "https://repo1.maven.org/maven2"
+jars = [
+    "org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.3/spark-sql-kafka-0-10_2.12-3.5.3.jar",
+    "org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.5.3/spark-token-provider-kafka-0-10_2.12-3.5.3.jar",
+    "org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar",
+    "org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar",
+]
+for j in jars:
+    urllib.request.urlretrieve(f"{base}/{j}", f"/opt/spark/jars/{j.split('/')[-1]}")
+PY
+
 ENV PYTHONPATH=/app/src
 WORKDIR /app
 USER spark

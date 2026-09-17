@@ -25,7 +25,7 @@ class Config:
     kafka_topic: str
 
     @classmethod
-    def from_env(cls) -> "Config":
+    def from_env(cls) -> Config:
         load_dotenv()
         return cls(
             user_agent=os.environ.get("SC_USER_AGENT", "sensor-reliability/0.1"),

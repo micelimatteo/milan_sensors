@@ -41,7 +41,7 @@ LONG = T.StructType(
 
 
 def _t(minute: int) -> dt.datetime:
-    return dt.datetime(2026, 9, 11, 0, minute, tzinfo=dt.timezone.utc)
+    return dt.datetime(2026, 9, 11, 0, minute, tzinfo=dt.UTC)
 
 
 @pytest.fixture(scope="session")
@@ -74,7 +74,11 @@ def test_parse_events_explodes_values(spark):
     # Format event_time in the (UTC) session tz so the check does not depend on the driver's zone.
     rows = (
         parse_events(kafka)
-        .select("value_type", "value", F.date_format("event_time", "yyyy-MM-dd HH:mm:ss").alias("ts"))
+        .select(
+            "value_type",
+            "value",
+            F.date_format("event_time", "yyyy-MM-dd HH:mm:ss").alias("ts"),
+        )
         .collect()
     )
 

@@ -52,7 +52,7 @@ def run(cfg: Config, start: str, end: str) -> int:
     producer = Producer({"bootstrap.servers": cfg.kafka_bootstrap})
     session = requests.Session()
     sensors = load_study_sensors()
-    fetched_at = dt.datetime.now(dt.timezone.utc)
+    fetched_at = dt.datetime.now(dt.UTC)
 
     total = 0
     for date in _dates(start, end):
