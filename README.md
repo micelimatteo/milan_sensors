@@ -19,10 +19,11 @@ reliability analysis and the honest data-quality accounting that feeds it.
 ## Status
 
 Under construction, milestone by milestone. Working end to end today: ingestion (poller ->
-MQTT -> Kafka, plus archive backfill), Spark event-time stream processing to curated Parquet, and
-the humidity-vs-PM analysis with committed result artifacts (see Results). Still to come: the
-reference-station comparison (M5) and containerising the app services for a single-command run
-(M6). See `DESIGN.md` for the plan and the reasoning behind each choice.
+MQTT -> Kafka, plus archive backfill), Spark event-time stream processing to curated Parquet, the
+humidity-vs-PM analysis, and the citizen-vs-reference comparison, all with committed result
+artifacts (see Results). Still to come: containerising the app services for a single-command run
+(M6), and optionally the SAREF/RDF layer. See `DESIGN.md` for the plan and the reasoning behind
+each choice.
 
 ## Scope of the first slice
 
@@ -119,6 +120,7 @@ the streaming job, sharing its transforms), then analysed:
 ```bash
 make curate START=2026-09-01 END=2026-09-13   # archive -> data/curated (no broker needed)
 make analyze                                  # humidity-vs-PM analysis -> artifacts/
+make reference                                # citizen-vs-ARPA-reference comparison -> artifacts/
 ```
 
 ### Tests
@@ -150,8 +152,20 @@ artifacts in `artifacts/`):
 - Practical takeaway: flag PM at high RH (>= ~90%, a third of the data) as low-confidence. Whether
   a correction actually reduces bias is answered in M5 against reference stations.
 
-This is an honest, partly negative result: in this window the humidity artifact is not separable
-from meteorology using the citizen data alone. Part (b) (reference comparison) is next.
+Part (b), agreement with reference stations (ARPA Lombardia daily PM2.5, three Milan stations;
+166 paired location-days):
+
+- Citizen sensors **substantially under-read**: mean citizen PM2.5 4.4 vs reference 12.5 ug/m3,
+  median bias **-8.3 ug/m3** (~a third of the reference). This holds for the near subset (<= 5 km,
+  median bias -7.6), so it is not a distance artifact (`artifacts/citizen_vs_reference.png`).
+- Absolute error vs reference (near subset, raw): p50 7.8, p90 12.5, p95 13.6 ug/m3.
+- Because the sensors under-read, the humidity correction **increases** error (near p50 7.8 ->
+  10.3): the standard RH correction is harmful here, not helpful.
+
+**Overall:** the first-order reliability problem for these sensors in Milan is a large,
+roughly multiplicative under-reading (a calibration/scale issue), which dwarfs the humidity
+effect. The useful fix is a per-sensor scale calibration against the reference, not a blanket
+humidity correction. Full write-up in `ANALYSIS.md`.
 
 ## Limitations and next steps
 

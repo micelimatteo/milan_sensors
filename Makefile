@@ -62,6 +62,9 @@ curate:
 analyze:       ## humidity-vs-PM analysis over data/curated -> artifacts/
 	python -m sensor_reliability.analysis.humidity
 
+reference:     ## citizen-vs-ARPA-reference comparison -> artifacts/
+	python -m sensor_reliability.analysis.reference
+
 test:
 	pytest
 
