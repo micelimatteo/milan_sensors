@@ -129,6 +129,10 @@ def build_comparison(curated_dir: str, start: str, end: str) -> pd.DataFrame:
     citizen = citizen.merge(nearest, on="location_id")
 
     merged = citizen.merge(reference, on=["idsensore", "date"], how="inner")
+    stn = stations.rename(
+        columns={"nomestazione": "station_name", "lat": "station_lat", "lng": "station_lon"}
+    )
+    merged = merged.merge(stn, on="idsensore", how="left")
     merged["bias"] = merged["cit_pm25"] - merged["ref_pm25"]
     merged["bias_corrected"] = merged["cit_pm25_corrected"] - merged["ref_pm25"]
     return merged

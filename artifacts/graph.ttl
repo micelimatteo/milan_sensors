@@ -1,0 +1,1874 @@
+@prefix ex: <https://w3id.org/milan-sensors#> .
+@prefix geo1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:citizen-10994 a saref:Sensor ;
+    rdfs:label "citizen node 10994" ;
+    geo1:lat 45.486 ;
+    geo1:long 9.19 ;
+    saref:makesMeasurement ex:m-citizen-10994-2026-09-01,
+        ex:m-citizen-10994-2026-09-02,
+        ex:m-citizen-10994-2026-09-03,
+        ex:m-citizen-10994-2026-09-04,
+        ex:m-citizen-10994-2026-09-05,
+        ex:m-citizen-10994-2026-09-06,
+        ex:m-citizen-10994-2026-09-07,
+        ex:m-citizen-10994-2026-09-08,
+        ex:m-citizen-10994-2026-09-09,
+        ex:m-citizen-10994-2026-09-10,
+        ex:m-citizen-10994-2026-09-11,
+        ex:m-citizen-10994-2026-09-12,
+        ex:m-citizen-10994-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 1.1 ;
+    ex:nearestReference ex:reference-20529 ;
+    ex:network "citizen" .
+
+ex:citizen-18853 a saref:Sensor ;
+    rdfs:label "citizen node 18853" ;
+    geo1:lat 45.426 ;
+    geo1:long 9.206 ;
+    saref:makesMeasurement ex:m-citizen-18853-2026-09-01,
+        ex:m-citizen-18853-2026-09-02,
+        ex:m-citizen-18853-2026-09-03,
+        ex:m-citizen-18853-2026-09-04,
+        ex:m-citizen-18853-2026-09-05,
+        ex:m-citizen-18853-2026-09-06,
+        ex:m-citizen-18853-2026-09-07,
+        ex:m-citizen-18853-2026-09-08,
+        ex:m-citizen-18853-2026-09-09,
+        ex:m-citizen-18853-2026-09-10,
+        ex:m-citizen-18853-2026-09-11,
+        ex:m-citizen-18853-2026-09-12,
+        ex:m-citizen-18853-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 5.0 ;
+    ex:nearestReference ex:reference-17122 ;
+    ex:network "citizen" .
+
+ex:citizen-26753 a saref:Sensor ;
+    rdfs:label "citizen node 26753" ;
+    geo1:lat 45.544 ;
+    geo1:long 9.232 ;
+    saref:makesMeasurement ex:m-citizen-26753-2026-09-01,
+        ex:m-citizen-26753-2026-09-02,
+        ex:m-citizen-26753-2026-09-03,
+        ex:m-citizen-26753-2026-09-04,
+        ex:m-citizen-26753-2026-09-05,
+        ex:m-citizen-26753-2026-09-06,
+        ex:m-citizen-26753-2026-09-07,
+        ex:m-citizen-26753-2026-09-08,
+        ex:m-citizen-26753-2026-09-09,
+        ex:m-citizen-26753-2026-09-10,
+        ex:m-citizen-26753-2026-09-11,
+        ex:m-citizen-26753-2026-09-12,
+        ex:m-citizen-26753-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 1.1 ;
+    ex:nearestReference ex:reference-20358 ;
+    ex:network "citizen" .
+
+ex:citizen-36026 a saref:Sensor ;
+    rdfs:label "citizen node 36026" ;
+    geo1:lat 45.478 ;
+    geo1:long 9.224 ;
+    saref:makesMeasurement ex:m-citizen-36026-2026-09-01,
+        ex:m-citizen-36026-2026-09-02,
+        ex:m-citizen-36026-2026-09-03,
+        ex:m-citizen-36026-2026-09-04,
+        ex:m-citizen-36026-2026-09-05,
+        ex:m-citizen-36026-2026-09-06,
+        ex:m-citizen-36026-2026-09-07,
+        ex:m-citizen-36026-2026-09-08,
+        ex:m-citizen-36026-2026-09-09,
+        ex:m-citizen-36026-2026-09-10,
+        ex:m-citizen-36026-2026-09-11,
+        ex:m-citizen-36026-2026-09-12,
+        ex:m-citizen-36026-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 0.6 ;
+    ex:nearestReference ex:reference-10283 ;
+    ex:network "citizen" .
+
+ex:citizen-43252 a saref:Sensor ;
+    rdfs:label "citizen node 43252" ;
+    geo1:lat 45.43433692 ;
+    geo1:long 9.10697758 ;
+    saref:makesMeasurement ex:m-citizen-43252-2026-09-01,
+        ex:m-citizen-43252-2026-09-02,
+        ex:m-citizen-43252-2026-09-03,
+        ex:m-citizen-43252-2026-09-04,
+        ex:m-citizen-43252-2026-09-05,
+        ex:m-citizen-43252-2026-09-06,
+        ex:m-citizen-43252-2026-09-07,
+        ex:m-citizen-43252-2026-09-08,
+        ex:m-citizen-43252-2026-09-09,
+        ex:m-citizen-43252-2026-09-10,
+        ex:m-citizen-43252-2026-09-11,
+        ex:m-citizen-43252-2026-09-12,
+        ex:m-citizen-43252-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 8.1 ;
+    ex:nearestReference ex:reference-17122 ;
+    ex:network "citizen" .
+
+ex:citizen-45045 a saref:Sensor ;
+    rdfs:label "citizen node 45045" ;
+    geo1:lat 45.44 ;
+    geo1:long 9.178 ;
+    saref:makesMeasurement ex:m-citizen-45045-2026-09-01,
+        ex:m-citizen-45045-2026-09-02,
+        ex:m-citizen-45045-2026-09-03,
+        ex:m-citizen-45045-2026-09-04,
+        ex:m-citizen-45045-2026-09-05,
+        ex:m-citizen-45045-2026-09-06,
+        ex:m-citizen-45045-2026-09-07,
+        ex:m-citizen-45045-2026-09-08,
+        ex:m-citizen-45045-2026-09-09,
+        ex:m-citizen-45045-2026-09-10,
+        ex:m-citizen-45045-2026-09-11,
+        ex:m-citizen-45045-2026-09-12,
+        ex:m-citizen-45045-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 3.7 ;
+    ex:nearestReference ex:reference-17122 ;
+    ex:network "citizen" .
+
+ex:citizen-45825 a saref:Sensor ;
+    rdfs:label "citizen node 45825" ;
+    geo1:lat 45.434 ;
+    geo1:long 9.116 ;
+    saref:makesMeasurement ex:m-citizen-45825-2026-09-01,
+        ex:m-citizen-45825-2026-09-02,
+        ex:m-citizen-45825-2026-09-03,
+        ex:m-citizen-45825-2026-09-04,
+        ex:m-citizen-45825-2026-09-05,
+        ex:m-citizen-45825-2026-09-06,
+        ex:m-citizen-45825-2026-09-07,
+        ex:m-citizen-45825-2026-09-08,
+        ex:m-citizen-45825-2026-09-09,
+        ex:m-citizen-45825-2026-09-10,
+        ex:m-citizen-45825-2026-09-11,
+        ex:m-citizen-45825-2026-09-12,
+        ex:m-citizen-45825-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 7.5 ;
+    ex:nearestReference ex:reference-17122 ;
+    ex:network "citizen" .
+
+ex:citizen-46180 a saref:Sensor ;
+    rdfs:label "citizen node 46180" ;
+    geo1:lat 45.53606203 ;
+    geo1:long 9.2263028 ;
+    saref:makesMeasurement ex:m-citizen-46180-2026-09-01,
+        ex:m-citizen-46180-2026-09-02,
+        ex:m-citizen-46180-2026-09-03,
+        ex:m-citizen-46180-2026-09-04,
+        ex:m-citizen-46180-2026-09-05,
+        ex:m-citizen-46180-2026-09-06,
+        ex:m-citizen-46180-2026-09-07,
+        ex:m-citizen-46180-2026-09-08,
+        ex:m-citizen-46180-2026-09-09,
+        ex:m-citizen-46180-2026-09-10,
+        ex:m-citizen-46180-2026-09-11,
+        ex:m-citizen-46180-2026-09-12,
+        ex:m-citizen-46180-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 0.8 ;
+    ex:nearestReference ex:reference-20358 ;
+    ex:network "citizen" .
+
+ex:citizen-81627 a saref:Sensor ;
+    rdfs:label "citizen node 81627" ;
+    geo1:lat 45.576 ;
+    geo1:long 9.126 ;
+    saref:makesMeasurement ex:m-citizen-81627-2026-09-01,
+        ex:m-citizen-81627-2026-09-02,
+        ex:m-citizen-81627-2026-09-03,
+        ex:m-citizen-81627-2026-09-04,
+        ex:m-citizen-81627-2026-09-05,
+        ex:m-citizen-81627-2026-09-06,
+        ex:m-citizen-81627-2026-09-07,
+        ex:m-citizen-81627-2026-09-08,
+        ex:m-citizen-81627-2026-09-09,
+        ex:m-citizen-81627-2026-09-10,
+        ex:m-citizen-81627-2026-09-11,
+        ex:m-citizen-81627-2026-09-12,
+        ex:m-citizen-81627-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 9.6 ;
+    ex:nearestReference ex:reference-9873 ;
+    ex:network "citizen" .
+
+ex:citizen-88084 a saref:Sensor ;
+    rdfs:label "citizen node 88084" ;
+    geo1:lat 45.362 ;
+    geo1:long 9.048 ;
+    saref:makesMeasurement ex:m-citizen-88084-2026-09-01,
+        ex:m-citizen-88084-2026-09-02,
+        ex:m-citizen-88084-2026-09-03,
+        ex:m-citizen-88084-2026-09-04,
+        ex:m-citizen-88084-2026-09-05,
+        ex:m-citizen-88084-2026-09-06,
+        ex:m-citizen-88084-2026-09-07,
+        ex:m-citizen-88084-2026-09-08,
+        ex:m-citizen-88084-2026-09-09,
+        ex:m-citizen-88084-2026-09-10,
+        ex:m-citizen-88084-2026-09-11,
+        ex:m-citizen-88084-2026-09-12,
+        ex:m-citizen-88084-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 16.8 ;
+    ex:nearestReference ex:reference-17122 ;
+    ex:network "citizen" .
+
+ex:citizen-92162 a saref:Sensor ;
+    rdfs:label "citizen node 92162" ;
+    geo1:lat 45.4778148 ;
+    geo1:long 9.234495 ;
+    saref:makesMeasurement ex:m-citizen-92162-2026-09-01,
+        ex:m-citizen-92162-2026-09-02,
+        ex:m-citizen-92162-2026-09-03,
+        ex:m-citizen-92162-2026-09-04,
+        ex:m-citizen-92162-2026-09-05,
+        ex:m-citizen-92162-2026-09-06,
+        ex:m-citizen-92162-2026-09-07,
+        ex:m-citizen-92162-2026-09-08,
+        ex:m-citizen-92162-2026-09-09,
+        ex:m-citizen-92162-2026-09-10,
+        ex:m-citizen-92162-2026-09-11 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 0.2 ;
+    ex:nearestReference ex:reference-10283 ;
+    ex:network "citizen" .
+
+ex:citizen-92204 a saref:Sensor ;
+    rdfs:label "citizen node 92204" ;
+    geo1:lat 45.4918623 ;
+    geo1:long 9.2315227 ;
+    saref:makesMeasurement ex:m-citizen-92204-2026-09-01,
+        ex:m-citizen-92204-2026-09-02,
+        ex:m-citizen-92204-2026-09-03,
+        ex:m-citizen-92204-2026-09-04,
+        ex:m-citizen-92204-2026-09-05,
+        ex:m-citizen-92204-2026-09-06,
+        ex:m-citizen-92204-2026-09-07,
+        ex:m-citizen-92204-2026-09-08,
+        ex:m-citizen-92204-2026-09-09,
+        ex:m-citizen-92204-2026-09-10,
+        ex:m-citizen-92204-2026-09-11,
+        ex:m-citizen-92204-2026-09-12,
+        ex:m-citizen-92204-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 1.5 ;
+    ex:nearestReference ex:reference-10283 ;
+    ex:network "citizen" .
+
+ex:citizen-92415 a saref:Sensor ;
+    rdfs:label "citizen node 92415" ;
+    geo1:lat 45.424 ;
+    geo1:long 9.1 ;
+    saref:makesMeasurement ex:m-citizen-92415-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 9.2 ;
+    ex:nearestReference ex:reference-17122 ;
+    ex:network "citizen" .
+
+ex:citizen-9537 a saref:Sensor ;
+    rdfs:label "citizen node 9537" ;
+    geo1:lat 45.594 ;
+    geo1:long 9.294 ;
+    saref:makesMeasurement ex:m-citizen-9537-2026-09-01,
+        ex:m-citizen-9537-2026-09-04,
+        ex:m-citizen-9537-2026-09-05,
+        ex:m-citizen-9537-2026-09-06,
+        ex:m-citizen-9537-2026-09-07,
+        ex:m-citizen-9537-2026-09-08,
+        ex:m-citizen-9537-2026-09-09,
+        ex:m-citizen-9537-2026-09-10,
+        ex:m-citizen-9537-2026-09-11,
+        ex:m-citizen-9537-2026-09-12,
+        ex:m-citizen-9537-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:distanceToReferenceKm 3.2 ;
+    ex:nearestReference ex:reference-10396 ;
+    ex:network "citizen" .
+
+ex:m-citizen-10994-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 1.78 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 1.94 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 2.58 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 2.28 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 1.81 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 2.86 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 2.76 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 3.21 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 1.65 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 0.62 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 3.57 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 2.48 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-10994-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 2.28 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 3.68 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 4.8 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 5.82 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 6.72 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 3.42 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 9.16 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 7.1 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 8.48 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 7.1 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 3.74 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 10.68 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 8.5 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-18853-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 6.72 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 3.97 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 3.36 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 4.15 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 3.64 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 2.97 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 3.69 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 4.35 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 5.02 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 2.89 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 1.43 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 4.88 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 4.09 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-26753-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 3.72 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 3.34 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 3.32 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 4.78 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 4.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 2.9 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 5.88 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 4.37 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 5.58 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 2.48 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 1.14 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 6.47 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 4.89 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-36026-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 5.18 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 2.7 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 3.27 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 4.84 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 4.34 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 3.02 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 5.52 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 3.89 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 5.2 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 3.72 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 1.52 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 5.96 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 5.13 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-43252-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 3.98 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 2.17 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 3.17 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 4.48 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 3.84 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 2.35 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 5.32 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 3.22 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 5.2 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 2.64 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 0.89 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 7.33 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 4.49 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45045-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 3.89 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 2.42 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 3.05 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 9.68 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 26.09 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 3.4 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 3.92 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 3.62 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 4.98 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 2.77 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 1.15 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 5.74 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 2.82 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-45825-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 2.62 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 3.95 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 4.05 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 5.28 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 4.67 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 3.88 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 4.77 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 6.45 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 6.56 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 3.45 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 1.32 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 4.82 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 4.71 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-46180-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 4.54 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 3.28 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 3.63 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 3.68 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 4.91 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 3.24 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 5.29 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 6.53 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 5.18 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 2.8 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 1.84 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 3.46 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 4.81 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-81627-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 5.06 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 0.37 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 0.44 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 0.5 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 0.51 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 0.37 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 0.54 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 0.49 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 0.55 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 0.54 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 0.25 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 0.45 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 0.42 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-88084-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 0.37 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 4.43 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 5.68 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 7.49 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 7.54 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 5.1 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 9.3 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 7.45 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 9.91 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 6.39 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 1.4 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92162-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 0.73 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 5.06 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 5.86 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 7.36 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 6.62 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 21.66 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 9.04 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 7.11 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 9.82 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 5.41 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 2.75 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 8.62 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 7.67 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92204-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 7.56 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-92415-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 13.69 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 3.35 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 3.28 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 2.78 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 3.11 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 4.31 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 4.92 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 2.33 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 0.89 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 3.35 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 2.81 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-citizen-9537-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 2.66 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 12.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 14.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 15.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 13.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 14.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 16.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 9.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 4.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 9.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 10.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10283-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 16.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 15.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 14.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 15.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 8.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 6.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 13.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 12.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-10396-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 12.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 13.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 16.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 19.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 19.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 4.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 2.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 10.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 15.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-17122-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 10.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 14.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 9.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 12.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 12.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 12.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 6.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 4.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 10.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20358-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 14.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 15.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 16.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 13.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 13.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 16.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 18.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 5.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 9.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 10.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-20529-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 12.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-01 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-01"^^xsd:date ;
+    saref:hasValue 12.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-02 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-02"^^xsd:date ;
+    saref:hasValue 13.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-03 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-03"^^xsd:date ;
+    saref:hasValue 13.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-04 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-04"^^xsd:date ;
+    saref:hasValue 11.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-05 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-05"^^xsd:date ;
+    saref:hasValue 15.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-06 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-06"^^xsd:date ;
+    saref:hasValue 13.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-07 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-07"^^xsd:date ;
+    saref:hasValue 17.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-08 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-08"^^xsd:date ;
+    saref:hasValue 15.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-09 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-09"^^xsd:date ;
+    saref:hasValue 6.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-10 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-10"^^xsd:date ;
+    saref:hasValue 2.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-11 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-11"^^xsd:date ;
+    saref:hasValue 2.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-12 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-12"^^xsd:date ;
+    saref:hasValue 10.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:m-reference-9873-2026-09-13 a saref:Measurement ;
+    saref:hasTimestamp "2026-09-13"^^xsd:date ;
+    saref:hasValue 9.0 ;
+    saref:isMeasuredIn ex:ug-m3 ;
+    saref:relatesToProperty ex:PM2.5 .
+
+ex:reference-10396 a saref:Sensor ;
+    rdfs:label "Monza v.Machiavelli" ;
+    geo1:lat 45.574117 ;
+    geo1:long 9.263808 ;
+    saref:makesMeasurement ex:m-reference-10396-2026-09-01,
+        ex:m-reference-10396-2026-09-04,
+        ex:m-reference-10396-2026-09-05,
+        ex:m-reference-10396-2026-09-06,
+        ex:m-reference-10396-2026-09-07,
+        ex:m-reference-10396-2026-09-08,
+        ex:m-reference-10396-2026-09-09,
+        ex:m-reference-10396-2026-09-10,
+        ex:m-reference-10396-2026-09-11,
+        ex:m-reference-10396-2026-09-12,
+        ex:m-reference-10396-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:network "reference" .
+
+ex:reference-20529 a saref:Sensor ;
+    rdfs:label "Milano v.Marche" ;
+    geo1:lat 45.49631883 ;
+    geo1:long 9.19093444 ;
+    saref:makesMeasurement ex:m-reference-20529-2026-09-01,
+        ex:m-reference-20529-2026-09-02,
+        ex:m-reference-20529-2026-09-03,
+        ex:m-reference-20529-2026-09-04,
+        ex:m-reference-20529-2026-09-05,
+        ex:m-reference-20529-2026-09-06,
+        ex:m-reference-20529-2026-09-07,
+        ex:m-reference-20529-2026-09-08,
+        ex:m-reference-20529-2026-09-09,
+        ex:m-reference-20529-2026-09-10,
+        ex:m-reference-20529-2026-09-11,
+        ex:m-reference-20529-2026-09-12,
+        ex:m-reference-20529-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:network "reference" .
+
+ex:reference-9873 a saref:Sensor ;
+    rdfs:label "Saronno v.Santuario" ;
+    geo1:lat 45.62735705 ;
+    geo1:long 9.02640138 ;
+    saref:makesMeasurement ex:m-reference-9873-2026-09-01,
+        ex:m-reference-9873-2026-09-02,
+        ex:m-reference-9873-2026-09-03,
+        ex:m-reference-9873-2026-09-04,
+        ex:m-reference-9873-2026-09-05,
+        ex:m-reference-9873-2026-09-06,
+        ex:m-reference-9873-2026-09-07,
+        ex:m-reference-9873-2026-09-08,
+        ex:m-reference-9873-2026-09-09,
+        ex:m-reference-9873-2026-09-10,
+        ex:m-reference-9873-2026-09-11,
+        ex:m-reference-9873-2026-09-12,
+        ex:m-reference-9873-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:network "reference" .
+
+ex:reference-20358 a saref:Sensor ;
+    rdfs:label "Sesto San Giovanni v. Cesare da Sesto" ;
+    geo1:lat 45.53476819 ;
+    geo1:long 9.23610903 ;
+    saref:makesMeasurement ex:m-reference-20358-2026-09-01,
+        ex:m-reference-20358-2026-09-02,
+        ex:m-reference-20358-2026-09-03,
+        ex:m-reference-20358-2026-09-04,
+        ex:m-reference-20358-2026-09-05,
+        ex:m-reference-20358-2026-09-06,
+        ex:m-reference-20358-2026-09-07,
+        ex:m-reference-20358-2026-09-08,
+        ex:m-reference-20358-2026-09-09,
+        ex:m-reference-20358-2026-09-10,
+        ex:m-reference-20358-2026-09-11,
+        ex:m-reference-20358-2026-09-12,
+        ex:m-reference-20358-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:network "reference" .
+
+ex:reference-10283 a saref:Sensor ;
+    rdfs:label "Milano Pascal Città Studi" ;
+    geo1:lat 45.478347 ;
+    geo1:long 9.231667 ;
+    saref:makesMeasurement ex:m-reference-10283-2026-09-01,
+        ex:m-reference-10283-2026-09-02,
+        ex:m-reference-10283-2026-09-03,
+        ex:m-reference-10283-2026-09-04,
+        ex:m-reference-10283-2026-09-05,
+        ex:m-reference-10283-2026-09-06,
+        ex:m-reference-10283-2026-09-07,
+        ex:m-reference-10283-2026-09-08,
+        ex:m-reference-10283-2026-09-09,
+        ex:m-reference-10283-2026-09-10,
+        ex:m-reference-10283-2026-09-11,
+        ex:m-reference-10283-2026-09-12,
+        ex:m-reference-10283-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:network "reference" .
+
+ex:reference-17122 a saref:Sensor ;
+    rdfs:label "Milano v.Senato" ;
+    geo1:lat 45.470501 ;
+    geo1:long 9.19746075 ;
+    saref:makesMeasurement ex:m-reference-17122-2026-09-01,
+        ex:m-reference-17122-2026-09-02,
+        ex:m-reference-17122-2026-09-03,
+        ex:m-reference-17122-2026-09-04,
+        ex:m-reference-17122-2026-09-05,
+        ex:m-reference-17122-2026-09-06,
+        ex:m-reference-17122-2026-09-07,
+        ex:m-reference-17122-2026-09-08,
+        ex:m-reference-17122-2026-09-09,
+        ex:m-reference-17122-2026-09-10,
+        ex:m-reference-17122-2026-09-11,
+        ex:m-reference-17122-2026-09-12,
+        ex:m-reference-17122-2026-09-13 ;
+    saref:measuresProperty ex:PM2.5 ;
+    ex:network "reference" .
+
+ex:ug-m3 a saref:UnitOfMeasure ;
+    rdfs:label "ug/m3" .
+
+ex:PM2.5 a saref:Property ;
+    rdfs:label "PM2.5" .
+

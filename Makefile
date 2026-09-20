@@ -63,6 +63,9 @@ analyze:       ## humidity-vs-PM analysis over data/curated -> artifacts/
 reference:     ## citizen-vs-ARPA-reference comparison -> artifacts/
 	python -m sensor_reliability.analysis.reference
 
+graph:         ## build the SAREF/RDF graph and run SPARQL queries -> artifacts/graph.ttl
+	python -m sensor_reliability.semantic.graph
+
 test:
 	pytest
 

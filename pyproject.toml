@@ -26,6 +26,10 @@ dependencies = [
 spark = [
     "pyspark==3.5.3",
 ]
+# Optional semantic layer (M7): SAREF/RDF graph + SPARQL.
+rdf = [
+    "rdflib==7.1.1",
+]
 dev = [
     "pytest==8.3.3",
     "ruff==0.6.9",

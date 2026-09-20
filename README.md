@@ -20,10 +20,10 @@ reliability analysis and the honest data-quality accounting that feeds it.
 
 Under construction, milestone by milestone. Working end to end today: ingestion (poller ->
 MQTT -> Kafka, plus archive backfill), Spark event-time stream processing to curated Parquet, the
-humidity-vs-PM analysis, and the citizen-vs-reference comparison, all with committed result
-artifacts (see Results). Still to come: containerising the app services for a single-command run
-(M6), and optionally the SAREF/RDF layer. See `DESIGN.md` for the plan and the reasoning behind
-each choice.
+humidity-vs-PM analysis, the citizen-vs-reference comparison, and an optional SAREF/RDF + SPARQL
+layer, all with committed result artifacts (see Results). The services are containerised and a CI
+workflow runs lint and the full test suite on every push. See `DESIGN.md` for the plan and the
+reasoning behind each choice.
 
 ## Scope of the first slice
 
@@ -140,6 +140,21 @@ Part (b), agreement with reference stations (ARPA Lombardia daily PM2.5, three M
 roughly multiplicative under-reading (a calibration/scale issue), which dwarfs the humidity
 effect. The useful fix is a per-sensor scale calibration against the reference, not a blanket
 humidity correction. Full write-up in `ANALYSIS.md`.
+
+## Semantic layer (SAREF/RDF, optional)
+
+An optional, self-contained phase models the sensors, measurements, locations and units with the
+[SAREF](https://saref.etsi.org/) ontology and answers the reliability question in SPARQL. It reads
+the committed `artifacts/reference_pairs.csv`, so it runs offline:
+
+```bash
+pip install -e ".[rdf]"
+make graph        # builds artifacts/graph.ttl and runs the SPARQL queries
+```
+
+The mean-PM2.5-per-network query reproduces the headline straight from the graph (citizen ~4.4 vs
+reference ~12 ug/m3), and a graph join of each citizen sensor to its nearest reference reproduces
+the per-location bias. Design notes in `DESIGN.md` (decision 17).
 
 ## Limitations and next steps
 
